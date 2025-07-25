@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TNK FX Investment</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>TNK FX Investment</h1>
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#market">Market</a>
+      <a href="#trade">Trade Chart</a>
+      <a href="#admin">Referrals</a>
+      <a href="#support">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Login/Signup Section -->
+    <section id="auth">
+      <h2>Login or Sign Up</h2>
+      <form id="signupForm">
+        <input type="text" id="signupUsername" placeholder="Username" required />
+        <input type="password" id="signupPassword" placeholder="Password" required />
+        <input type="text" id="referralCode" placeholder="Referral Code (optional)" />
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username" required />
+        <input type="password" id="loginPassword" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" style="display:none">
+      <h2>Welcome, <span id="userDisplay"></span></h2>
+      <p>Balance: $<span id="userBalance">0.00</span></p>
+      <p>Your Referral Link: <input type="text" id="referralLink" readonly /></p>
+    </section>
+
+    <!-- Market -->
+    <section id="market">
+      <h2>Market Overview</h2>
+      <p>Live market data coming soon...</p>
+    </section>
+
+    <!-- Trade Chart -->
+    <section id="trade">
+      <h2>Trading Chart</h2>
+      <iframe src="https://www.tradingview.com/chart/" width="100%" height="400"></iframe>
+    </section>
+
+    <!-- Referrals/Admin Dashboard -->
+    <section id="admin">
+      <h2>Admin - Manage Referrals</h2>
+      <form id="updateBalanceForm">
+        <input type="text" id="refUsername" placeholder="User to Credit" required />
+        <input type="number" id="refAmount" placeholder="Amount" required />
+        <button type="submit">Update Balance</button>
+      </form>
+    </section>
+
+    <!-- Customer Support -->
+    <section id="support">
+      <h2>Contact Customer Support</h2>
+      <form id="supportForm">
+        <input type="text" id="supportUser" placeholder="Your Username" required />
+        <textarea id="supportMessage" placeholder="Enter your complaint here..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TNK FX Investment</p>
+  </footer>
+</body>
+</html>
